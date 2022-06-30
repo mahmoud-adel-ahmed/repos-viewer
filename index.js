@@ -11,19 +11,18 @@ async function getRepos() {
     let res = await fetch(`https://api.github.com/users/${input.value}/repos`);
     let data = await res.json();
     if (input.value) {
-      for (const repo of data) {
+      let repos = data.forEach((repo) => {
         let content = document.createElement("div");
-        content.innerHTML = `
-            <p class="title">${repo.name}</p>
-            <div class="anchors">
-                <a href=https://github.com/${input.value}/${repo.name}  class="btn" target="_blank">visit</a>
-                <a href="#" class="btn" target="_blank">stars ${repo.stargazers_count}</a> 
-            </div>
-        `;
         content.classList.add("content");
         ShowData.appendChild(content);
-        input.value = "";
-      }
+        content.innerHTML = `
+              <p class="title">${repo.name}</p>
+              <div class="anchors">
+                  <a href=https://github.com/${input.value}/${repo.name}  class="btn" target="_blank">visit</a>
+                  <a href="#" class="btn" target="_blank">stars ${repo.stargazers_count}</a> 
+              </div>`;
+      });
+      input.value = "";
     } else {
       errorDiv.innerHTML = "no repos to show";
     }
