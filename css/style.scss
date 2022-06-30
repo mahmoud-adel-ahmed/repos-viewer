@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+$pinkish: #ef4b7a;
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 70rem;
+  .inputBox {
+    width: 95%;
+    border: 0.2rem solid #eee;
+    margin: 1rem auto;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: auto 10rem;
+    gap: 1rem;
+    input {
+      border: 0.2rem solid $pinkish;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+    }
+    .btn {
+      border-radius: 0.5rem;
+      background: $pinkish;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+      &:hover {
+        background: #fff;
+        color: $pinkish;
+        border: 0.2rem solid $pinkish;
+      }
+    }
+  }
+
+  .show-data {
+    margin: 2rem 0;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: 1rem 0;
+      background: $pinkish;
+      border: 0.2rem solid #fff;
+      padding: 1rem;
+      p {
+        font-size: 2rem;
+        color: #fff;
+      }
+      .anchors {
+        .btn {
+          border-radius: 0.5rem;
+          text-align: center;
+          padding: 0.4rem 1rem;
+          font-size: 1.6rem;
+          background: rgb(255, 255, 255);
+          color: $pinkish;
+          border: 0.2rem solid #fff;
+          display: inline-block;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  font-size: 2.5rem;
+  color: $pinkish;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
