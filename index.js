@@ -11,7 +11,7 @@ async function getRepos() {
     let res = await fetch(`https://api.github.com/users/${input.value}/repos`);
     let data = await res.json();
     if (input.value) {
-      let repos = data.forEach((repo) => {
+      data.forEach((repo) => {
         let content = document.createElement("div");
         content.classList.add("content");
         ShowData.appendChild(content);
@@ -23,10 +23,11 @@ async function getRepos() {
               </div>`;
       });
       input.value = "";
+      errorDiv.innerHTML = "";
     } else {
       errorDiv.innerHTML = "no repos to show";
     }
   } catch (error) {
-    errorDiv.innerHTML = error.message;
+    errorDiv.innerHTML = "no such a github with that username found";
   }
 }

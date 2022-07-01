@@ -98,10 +98,11 @@ body {
 }
 
 .error {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ef4b7a;
   text-align: center;
   padding: 2rem;
+  text-transform: none;
 }
 
 @media screen and (max-width: 768px) {

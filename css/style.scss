@@ -92,7 +92,6 @@ body {
           font-size: 1.5rem;
           background: rgb(255, 255, 255);
           color: $pinkish;
-          // margin: 0 0.3rem;
           width: max-content;
         }
       }
@@ -101,10 +100,11 @@ body {
 }
 
 .error {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: $pinkish;
   text-align: center;
   padding: 2rem;
+  text-transform: none;
 }
 
 @media screen and (max-width: 768px) {
