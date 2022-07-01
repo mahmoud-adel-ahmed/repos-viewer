@@ -16,12 +16,11 @@ $pinkish: #ef4b7a;
 html {
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
-  overflow-x: hidden;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
-  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -32,7 +31,7 @@ body {
   max-width: 70rem;
   .inputBox {
     width: 95%;
-    border: 0.2rem solid #eee;
+    border: 0.1rem solid #eee;
     margin: 1rem auto;
     padding: 3rem 1rem;
     display: grid;
@@ -62,31 +61,39 @@ body {
   }
 
   .show-data {
-    margin: 2rem 0;
+    margin: 3rem 0;
     .content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
-      margin: 1rem 0;
+      gap: 1.5rem;
+      margin: 1rem auto;
       background: $pinkish;
       border: 0.2rem solid #fff;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+      border-radius: 0.5rem;
+      width: 95%;
       p {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: #fff;
+        word-wrap: break-word;
+        word-break: break-all;
+        line-height: 1.8;
       }
       .anchors {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.7rem;
         .btn {
           border-radius: 0.5rem;
           text-align: center;
           padding: 0.4rem 1rem;
-          font-size: 1.6rem;
+          font-size: 1.5rem;
           background: rgb(255, 255, 255);
           color: $pinkish;
-          border: 0.2rem solid #fff;
-          display: inline-block;
-          margin-left: 0.3rem;
+          // margin: 0 0.3rem;
+          width: max-content;
         }
       }
     }
@@ -102,6 +109,6 @@ body {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 50%;
+    font-size: 53%;
   }
 }
